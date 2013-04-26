@@ -11,10 +11,13 @@ public class Master {
         new Master().init();
     }
 
+    public Master() {
+        _s = new Secondary();
+    }
+    
     public void init() {
         subinit(1);
         subinit(2);
-        _s = new Secondary();
     }
 
     public void subinit(int i) {
