@@ -2,6 +2,8 @@ package de.test;
 
 public class Master {
 
+    private Secondary _s;
+
     /**
      * @param args
      */
@@ -12,6 +14,7 @@ public class Master {
     public void init() {
         subinit(1);
         subinit(2);
+        _s = new Secondary();
     }
 
     public void subinit(int i) {
@@ -21,6 +24,9 @@ public class Master {
             break;
         case 2:
             System.out.println("second case");
+            break;
+        case 3:
+            _s.checkme();
             break;
         default:
             System.out.println("default case");
